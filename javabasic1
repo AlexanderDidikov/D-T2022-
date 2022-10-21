@@ -1,0 +1,12 @@
+class Main
+{
+    public static String removeNumeric(String str) {
+        return str.replaceAll("[\\d]", "");
+    }
+ 
+    public static void main(String[] args)
+    {
+        String input = "A1B2C3D4E5";
+        System.out.println(removeNumeric(input));        // prints `ABCDE`
+    }
+}
