@@ -1,2 +1,1 @@
 # Didikov_Alexander
-JavaBasicKnowledge
