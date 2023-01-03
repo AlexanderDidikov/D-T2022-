@@ -1,0 +1,46 @@
+Scenario: Verify that the homepage loads correctly
+Given that I am on the homepage of the EPAM website
+When I visit the homepage
+Then the homepage should load successfully
+And I should see the EPAM logo at the top of the page
+
+Scenario: Verify that the search functionality works correctly
+Given that I am on the homepage of the EPAM website
+When I enter a search query into the search bar
+And I click FIND button
+Then the search results page should load successfully
+And I should see a list of relevant search results
+
+Scenario: Verify that the "Services" page loads correctly
+Given that I am on the homepage of the EPAM website
+When I click on the "Services" link in the top menu
+Then the "Services" page should load successfully
+And I should see a list of EPAM's services
+
+Scenario: Verify that the "About" page loads correctly
+Given that I am on the homepage of the EPAM website
+When I click on the "About" link in the top menu
+Then the "About" page should load successfully
+And I should see information about EPAM's history and mission
+
+Scenario: Verify that the "Careers" page loads correctly
+Given that I am on the homepage of the EPAM website
+When I click on the "Careers" link in the top menu
+Then the "Careers" page should load successfully
+And I should see a list of job openings at EPAM
+
+Scenario: Verify that the "Contact Us" page loads correctly
+Given that I am on the homepage of the EPAM website
+When I click on the "Contact Us" link in the top menu
+Then the "Contact Us" page should load successfully
+And I should see a form for contacting EPAM
+
+Scenario: Required fields
+ Given user is on Contact Us
+ When user click on SUBMIT button
+ Then user see red marked empty required fields
+    
+  Scenario: Dropping blocks
+  Given user is on FAQ page
+  When user click on any block with blue "+"
+   Then user see corresponding dropped block
