@@ -1,0 +1,57 @@
+public abstract class Application
+{
+    private String name;
+    private String version;
+
+    public abstract String getApplicationType();
+
+    public String getApplicationDetails()
+    {
+        return name + " version " + version;
+    }
+}
+
+public class DesktopApplication extends Application
+{
+    private String operatingSystem;
+
+    public String getApplicationType()
+    {
+        return "Desktop application";
+    }
+
+    public String getOperatingSystem()
+    {
+        return operatingSystem;
+    }
+}
+
+public class WebApplication extends Application
+{
+    private String url;
+
+    public String getApplicationType()
+    {
+        return "Web application";
+    }
+
+    public String getUrl()
+    {
+        return url;
+    }
+}
+
+public class MobileApplication extends Application
+{
+    private String mobilePlatform;
+
+    public String getApplicationType()
+    {
+        return "Mobile application";
+    }
+
+    public String getMobilePlatform()
+    {
+        return mobilePlatform;
+    }
+}
